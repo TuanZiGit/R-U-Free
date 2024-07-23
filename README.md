@@ -74,8 +74,9 @@ Are You Free 是一个基于`Python`的状态显示软件，可以让你的好�
             "uid": 0,
             "uid_str": "admin",
             "salt": "+cuGBWGur+oAfYRp", // 随机16位字符串，内容0-9,A-Z,a-z,+,/,=
-            "password": "5bfccc2d497e8ec386e54de9df5854b9", // 密码的加盐哈希值
-            "token": "7e8ac37a79e78ed562ba6dffcfcc436b", // Token的加盐哈希值
+            "password": "91f46441a65134e01cefda4c035e9b21d17193154e836c86c476d4bdf2e68167", // 密码的加盐哈希值
+            "token": "f3128b575ccd4e9c312cfcb7edd3adc296be67a55c861dcbfe87ed03b5fa94bb", // Token的加盐哈希值
+            "israw": false, // 通常用于人工配置，为true时服务器将自动转换password和token 注意：token为以"RUF-"加上一个八字节十六进制值
             "last_changed": -1590354886, // 最近一次状态更新时间Unix时间戳
             "status": 0, // 0离线 1空闲 2忙碌 其他参照下方自定义
             "deletion": false, // 是否要在下一次清理时删除此用户
@@ -93,8 +94,9 @@ Are You Free 是一个基于`Python`的状态显示软件，可以让你的好�
             "uid": 1,
             "uid_str": "exampleuser",
             "salt": "u/G/oJGgymQp69U7", // 随机0-9,A-Z,a-z,+,/,=
-            "password": "abab2f87456d90a22a40255ea0d75c67", // 密码的加盐哈希值
-            "token": "a1aca299eb19443461e772d8cce5fcb0", // Token的加盐哈希值
+            "password": "7f3447ba48562f103e8189622d9a82428f69e01a919551c246c2a8472e858380", // 密码的加盐哈希值
+            "token": "3a343937ae19135b66d84ccfd868bc9ab9d47c25d6f8bbb21b072e59c438a5dd", // Token的加盐哈希值
+            "israw": false, // 通常用于人工配置，为true时服务器将自动转换password和token 注意：token为以"RUF-"加上一个八字节十六进制值
             "last_changed": -1590354886, // 最近一次状态更新时间Unix时间戳
             "status": 0, // 0离线 1空闲 2忙碌 其他参照下方自定义
             "deletion": false, // 是否要在下一次清理时删除此用户
@@ -112,7 +114,7 @@ Are You Free 是一个基于`Python`的状态显示软件，可以让你的好�
 }
 ```
 
-然后启动服务器，服务器将自动加载配置并启动。若没有配置，服务器会使用默认配置进行启动，默认管理员账号密码均为`admin`，请注意修改。面板可通过`http://<ip>:<port>/dashboard`（若定义了不同的`prefix`，如以`/abc`为例，面板地址为`http://<ip>:<port>/abc/dashboard`），API则对应为`http://<ip>:<port>/api`（`prefix`情况同面板）。
+然后启动服务器`./server.py`，服务器将自动加载配置并启动。若没有配置，服务器会使用默认配置进行启动，默认管理员账号密码均为`admin`，请注意修改。面板可通过`http://<ip>:<port>/dashboard`（若定义了不同的`prefix`，如以`/abc`为例，面板地址为`http://<ip>:<port>/abc/dashboard`），API则对应为`http://<ip>:<port>/api`（`prefix`情况同面板）。
 
 > [!Warning]
 >
